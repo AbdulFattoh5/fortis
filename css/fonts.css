@@ -1,0 +1,9 @@
+@font-face{
+    font-family: 'PR';
+    src: url(../fonts/Play-Regular.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: 'PB';
+    src: url(../fonts/Play-Bold.ttf) format('truetype');
+}
