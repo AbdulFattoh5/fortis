@@ -44,7 +44,7 @@ const langArr = {
         link4: 'Reviews about us',
         link5: 'Contacts',
         bannerH: 'HEATERPOL: Creating Space for Success',
-        callBtn:'Back call',
+        callBtn: 'Back call',
     },
 
     tu: {
@@ -54,7 +54,7 @@ const langArr = {
         link4: 'Hakkımızda yapılan yorumlar',
         link5: 'Kişiler',
         bannerH: 'HEATERPOL: Başarı İçin Alan Oluşturuyoruz',
-        callBtn:'Geri arama',
+        callBtn: 'Geri arama',
     },
 };
 
@@ -78,3 +78,57 @@ function setLang(lang) {
 }
 let lang = window.hasOwnProperty('localStorage') || 'en';
 setLang(lang);
+
+const counters = document.querySelectorAll('.counter');
+const counterM = document.querySelector('.counterM');
+
+const options = {
+    threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            if (counter.classList.contains('counterM')) {
+                updateCounterM();
+            } else {
+                updateCounter(counter);
+            }
+            observer.unobserve(counter);
+        }
+    });
+}, options);
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+
+const updateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const speed = 200;
+    const increment = target / speed;
+
+    if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(() => updateCounter(counter), 50);
+    } else {
+        counter.innerText = target;
+    }
+};
+
+const targetM = parseInt(counterM.getAttribute('data-target'));
+const duration = 5000;
+const step = Math.floor(targetM / (duration / 100));
+let current = 0;
+
+const updateCounterM = () => {
+    current += step;
+    if (current >= targetM) {
+        counterM.textContent = targetM;
+    } else {
+        counterM.textContent = current;
+        requestAnimationFrame(updateCounterM);
+    }
+};
