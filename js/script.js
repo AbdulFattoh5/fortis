@@ -45,6 +45,27 @@ const langArr = {
         link5: 'Contacts',
         bannerH: 'HEATERPOL: Creating Space for Success',
         callBtn: 'Back call',
+        achivmentsH1:'Years of experience',
+        achivmentsH2:'Branches throughout Uzbekistan',
+        achivmentsH3:'Completed projects',
+        formH:'APPLICATION ON-LINE',
+        formP:'Leave a request and our specialists will contact you as soon as possible',
+        formBtn:'Send',
+        title1:'OUR SERVICES:',
+        subtitle1:'WE ARE OFFERING TO YOU',
+        service1: 'Property market',
+        service2: 'Machinery for industrial purposes',
+        service3: 'Furnishings and decorative supplies',
+        service4: 'Transport',
+        service5: 'Petroleum derivatives',
+        service6: 'Edibles and beverages',
+        service7: 'Beauty products',
+        service8: 'Clothes',
+        service9: 'Healthcare equipment',
+        service10: 'Electrical and electronic engineering',
+        service11: 'Travel and souvenir items',
+        service12:'Solar Panels',
+        serviceBtn:'More details',
     },
 
     tu: {
@@ -55,6 +76,27 @@ const langArr = {
         link5: 'Kişiler',
         bannerH: 'HEATERPOL: Başarı İçin Alan Oluşturuyoruz',
         callBtn: 'Geri arama',
+        achivmentsH1:'Yılların Deneyimi',
+        achivmentsH2:'Özbekistan genelinde şubeler',
+        achivmentsH3:'Tamamlanmış projeler',
+        formH:'ONLINE BAŞVURU',
+        formP:'Bir talep bırakın, uzmanlarımız sizinle en kısa sürede iletişime geçecektir.',
+        formBtn:'Göndermek',
+        title1:'HİZMETLERİMİZ',
+        subtitle1:'SİZE SUNUYORUZ',
+        service1: 'Gayrimenkul pazarı',
+        service2: 'Endüstriyel amaçlar için makine ekipmanları',
+        service3: 'Mobilyalar ve dekoratif malzemeler',
+        service4: 'Ulaşım',
+        service5: 'Petrol türevleri',
+        service6: 'Yiyecek ve içecekler',
+        service7: 'Güzellik ürünleri',
+        service8: 'Giysiler',
+        service9: 'Sağlık ekipmanları',
+        service10: 'Elektrik ve elektronik mühendisliği',
+        service11: 'Seyahat ve anı eşyaları',
+        service12:'Güneş Panelleri',
+        serviceBtn:'Daha fazla detay',
     },
 };
 
@@ -75,10 +117,15 @@ function setLang(lang) {
             elem.innerHTML = langArr[lang][key];
         }
     }
+    let serviceBtns = document.querySelectorAll('.lng-serviceBtn');
+    for (let btn of serviceBtns) {
+        btn.innerHTML = langArr[lang]['serviceBtn'];
+    }
 }
 let lang = window.hasOwnProperty('localStorage') || 'en';
 setLang(lang);
 
+// counter animation
 const counters = document.querySelectorAll('.counter');
 const counterM = document.querySelector('.counterM');
 
