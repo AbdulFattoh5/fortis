@@ -76,6 +76,7 @@ const langArr = {
         aboutBlockP1:'We give gifts and discounts to our customers!',
         aboutBlockP2:'The company employs only experienced specialists',
         aboutBlockP3:'We guarantee the quality of our services and products',
+        offer:'WE OFFER',
     },
 
     tu: {
@@ -117,6 +118,7 @@ const langArr = {
         aboutBlockP1:'Müşterilerimize hediyeler ve indirimler veriyoruz!',
         aboutBlockP2:'Şirket yalnızca deneyimli uzmanları istihdam etmektedir',
         aboutBlockP3:'Hizmet ve ürünlerimizin kalitesini garanti ediyoruz',
+        offer:'SUNUYORUZ',
     },
 };
 
