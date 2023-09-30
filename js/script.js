@@ -66,6 +66,16 @@ const langArr = {
         service11: 'Travel and souvenir items',
         service12:'Solar Panels',
         serviceBtn:'More details',
+        aboutTitle:'EXPERTIZE',
+        aboutSubtitle:'WE WORK FOR THE GOOD OF THE PEOPLE',
+        aboutP:'At HEATERPOL, expertise is our cornerstone. With years of experience and a deep understanding of various industries, we bring a wealth of knowledge to every project. Our team consists of dedicated professionals who excel in their respective fields, ensuring that our clients receive the highest level of service and guidance. Whether it\'s real estate, industrial equipment, automotive trade, or any other domain, our expertise allows us to navigate complex challenges and deliver tailored solutions. We stay ahead of the curve by staying updated with the latest trends and technologies, enabling us to provide innovative and efficient outcomes.',
+        aboutLink:'READ MORE',
+        aboutBlockH1:'FLEXIBLE PRICES',
+        aboutBlockH2:'EXPERIENCE',
+        aboutBlockH3:'QUALITY',
+        aboutBlockP1:'We give gifts and discounts to our customers!',
+        aboutBlockP2:'The company employs only experienced specialists',
+        aboutBlockP3:'We guarantee the quality of our services and products',
     },
 
     tu: {
@@ -97,6 +107,16 @@ const langArr = {
         service11: 'Seyahat ve anı eşyaları',
         service12:'Güneş Panelleri',
         serviceBtn:'Daha fazla detay',
+        aboutTitle:'Uzmanlık',
+        aboutSubtitle:'İNSANIN İYİLİĞİ İÇİN ÇALIŞIYORUZ',
+        aboutP:'HEATERPOL\'da, uzmanlık temel ilkesimizdir. Yılların deneyimi ve çeşitli sektörlerin derin anlayışıyla her projeye geniş bir bilgi birikimi getiriyoruz. Ekibimiz, kendi alanlarında üstün performans gösteren özverili profesyonellerden oluşur, bu da müşterilerimizin en yüksek düzeyde hizmet ve rehberlik aldığı anlamına gelir. Gayrimenkul, endüstriyel ekipman, otomotiv ticareti veya diğer herhangi bir alan olsun, uzmanlığımız karmaşık zorlukları aşmamıza ve özelleştirilmiş çözümler sunmamıza olanak tanır. En son trendler ve teknolojiler ile güncel kalarak, yenilikçi ve etkili sonuçlar sağlama yeteneğine sahibiz.',
+        aboutLink:'DEVAMINI OKU',
+        aboutBlockH1:'ESNEK FİYATLAR',
+        aboutBlockH2:'DENEYİM',
+        aboutBlockH3:'KALİTE',
+        aboutBlockP1:'Müşterilerimize hediyeler ve indirimler veriyoruz!',
+        aboutBlockP2:'Şirket yalnızca deneyimli uzmanları istihdam etmektedir',
+        aboutBlockP3:'Hizmet ve ürünlerimizin kalitesini garanti ediyoruz',
     },
 };
 
