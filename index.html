@@ -6,10 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heaterpol</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- favicon -->
     <link rel="shortcut icon" href="./img/favicon.png" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- emailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("lBPf34_JzoTn4NQVQ");
+    </script>
 </head>
 
 <body>
+    <div class="load">
+        <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
+            <circle cx="50" cy="50" r="20" />
+        </svg>
+    </div>
+    <div class="empty__input">
+        <h2 class="empty__input-h lng-emptyInput">Please fill in all the required fields</h2>
+        <button class="empty__input-btn lng-emptyInputBtn">Close</button>
+    </div>
+    <div class="success__message">
+        <div class="success__message-h">
+            <span class="success__message-success lng-successMessageG">Success!</span>
+            <span class=" lng-successMessageW">your message was sent.</span>
+        </div>
+        <button class="success__message-btn lng-successMessageBtn">Close</button>
+    </div>
+    <div class="error__mesage">
+        <div class="error__mesage-h">
+            <span class="error__mesage-error lng-error1">Error!</span>
+            <span class="lng-error2">Please try to send one more time or you
+                can send your message from</span>
+            <a class="error__mesage-media" href="https://t.me/bolajon2020">Telegram</a>
+            <span class="lng-error3">or</span>
+            <a class="error__mesage-media" href="mailto: heaterpoldist@gmail.com">Email</a>
+            <button class="error__mesage-btn lng-errorBtn">Close</button>
+        </div>
+    </div>
+    <div class="backCall">
+        <div class="backCall__form">
+            <button class="backCall-close"><i class="far fa-times"></i></button>
+            <h1 class="backCall__form-h">Back call</h1>
+            <p class="backCall__form-p">Leave a request and our specialists will contact you as soon as possible</p>
+            <form method="post" class="backCall__form-main">
+                <input name="name" autocomplete="off" id="name" type="text" required placeholder="Your name:"
+                    class="backCall__form-input">
+                <input name="phone" autocomplete="off" id="phone" type="text" required placeholder="Phone number*"
+                    class="backCall__form-input">
+                <input name="email" autocomplete="off" id="email" type="text" required placeholder="E-mail*"
+                    class="backCall__form-input">
+                <!-- <a href="" class="backCall__form-link"></a> -->
+                <button type="submit" id="submit" class="backCall__form-btn">Send</button>
+            </form>
+        </div>
+    </div>
     <header class="main" id="banner">
         <div class="main-bg"></div>
         <div class="header">
@@ -104,14 +156,14 @@
                     <h1 class="achivments__form-h lng-formH">APPLICATION ON-LINE</h1>
                     <p class="achivments__form-p lng-formP">Leave a request and our specialists will contact you as soon
                         as possible</p>
-                    <form action="" class="achivments__form-form">
+                    <form method="post" class="achivments__form-form">
                         <input type="text" class="achivments__form-input" id="inputname" placeholder="Your name:"
                             required>
                         <input type="text" class="achivments__form-input" id="inputhumber" placeholder="Phone number*"
                             required>
                         <input type="email" class="achivments__form-input" id="inputemail" placeholder="E-mail*"
                             required>
-                        <button type="submit" class="achivments__form-btn lng-formBtn">Send</button>
+                        <button type="submit" id="submitA" class="achivments__form-btn lng-formBtn">Send</button>
                     </form>
                 </div>
             </div>
@@ -129,63 +181,63 @@
                     <img src="./img/real-estate.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service1">Property market</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/equipment.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service2">Equipment for industrial use</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/furniture.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service3">Furnishings and decorative supplies</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/transport.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service4">Transport</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/oil-products.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service5">Petroleum derivatives</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/drinks.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service6">Edibles and beverages</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/beauty.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service7">Beauty products</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/cloth.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service8">Clothes</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
                 <div class="services__item">
                     <img src="./img/healthcare.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service9">Healthcare equipment</p>
-                        <button class="services__item-btn lng-serviceBtn">More details</button>
+                        <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
             </div>
@@ -240,17 +292,17 @@
                 <div class="offer__item">
                     <img src="./img/electrical-engineering.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service10">Electrical and electronic engineering</h2>
-                    <button class="offer__btn lng-serviceBtn">More details</button>
+                    <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
                 </div>
                 <div class="offer__item">
                     <img src="./img/souvenir.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service11">Travel and souvenir items</h2>
-                    <button class="offer__btn lng-serviceBtn">More details</button>
+                    <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
                 </div>
                 <div class="offer__item">
                     <img src="./img/solar-panel.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service12">Solar Panels</h2>
-                    <button class="offer__btn lng-serviceBtn">More details</button>
+                    <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
                 </div>
             </div>
         </div>
@@ -291,13 +343,13 @@
                     </div>
                 </div>
                 <div class="work__order">
-                    <button class="work__order-btn lng-workBtn">order a consultation</button>
+                    <a href="#form" class="work__order-btn lng-workBtn">order a consultation</a>
                     <p class="work__order-p lng-workP">WRITE TO US AND OUR SPECIALISTS WILL CONTACT YOU SOON</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="form">
         <div class="container">
             <h1 class="title lng-contactTitle">Contact</h1>
             <div class="subtitle">
@@ -305,25 +357,63 @@
                 <p class="subtitle__p lng-contactSubTitle">Contact us</p>
             </div>
             <div class="form__wrap">
-                <form action="" class="form__form">
+                <form method="post" class="form__form">
                     <div class="form__bg"></div>
                     <div class="form__form-wrap">
                         <h1 class="form__form-h lng-contactH">APPLICATION ON-LINE</h1>
-                        <p class="form__form-p lng-contactP">Leave a request and our specialists will contact you as soon as possible
+                        <p class="form__form-p lng-contactP">Leave a request and our specialists will contact you as
+                            soon as possible
                         </p>
-                        <input class="form__form-input" required type="text" placeholder="Your name:">
-                        <input class="form__form-input" required type="text" placeholder="Phone number*">
-                        <input class="form__form-input" required type="email" placeholder="E-mail*">
-                        <button class="form__form-btn lng-contactBtn" type="submit">SEND</button>
+                        <input class="form__form-input" id="nameF" required type="text" placeholder="Your name:">
+                        <input class="form__form-input" id="phoneF" required type="text" placeholder="Phone number*">
+                        <input class="form__form-input" id="emailF" required type="email" placeholder="E-mail*">
+                        <button class="form__form-btn lng-contactBtn" id="submitF" type="submit">SEND</button>
                     </div>
                 </form>
                 <div class="form__emails">
-                    <a href="mailto: heaterpoldist@gmail.com" class="form__emails-item">heaterpoldist@gmail.com <img src="./img/work1.png" alt=""></a>
-                    <a href="mailto: heaterpolco@gmail.com" class="form__emails-item">heaterpolco@gmail.com <img src="./img/work1.png" alt=""></a>
+                    <a href="mailto: heaterpoldist@gmail.com" class="form__emails-item">heaterpoldist@gmail.com <img
+                            src="./img/work1.png" alt=""></a>
+                    <a href="mailto: heaterpolco@gmail.com" class="form__emails-item">heaterpolco@gmail.com <img
+                            src="./img/work1.png" alt=""></a>
                 </div>
             </div>
         </div>
     </section>
+    <section class="map">
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3ebd0d8ee447f12d65d6b79b90f68a808ce195e546ba9bee6247cffe4742d536&amp;source=constructor"
+            width="100%" height="450" frameborder="0"></iframe>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrap container">
+            <div class="footer__details">
+                <div class="footer__details-item">
+                    <img src="./img/phone.svg" alt="" class="footer__details-item-img">
+                    <div class="footer__details-item-main">
+                        <p class="footer__details-item-p lng-footerP1">Call the number:</p>
+                        <a href="tel:+998999876543" class="footer__details-item-link">+998 99 987 65 43</a>
+                    </div>
+                </div>
+                <div class="footer__details-item">
+                    <img src="./img/email.svg" alt="" class="footer__details-item-img">
+                    <div class="footer__details-item-main">
+                        <p class="footer__details-item-p lng-footerP2">Write for any questions:</p>
+                        <a href="mailto: heaterpoldist@gmail.com"
+                            class="footer__details-item-link">heaterpoldist@gmail.com</a>
+                        <a href="mailto: heaterpolco@gmail.com"
+                            class="footer__details-item-link">heaterpolco@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__nav">
+                <a href="" class="footer__nav-link lng-footerLink1">Home</a>
+                <a href="" class="footer__nav-link lng-footerLink2">About company</a>
+                <a href="" class="footer__nav-link lng-footerLink3">We offer</a>
+                <a href="" class="footer__nav-link lng-footerLink4">Reviews about us</a>
+                <a href="" class="footer__nav-link lng-footerLink5">Contacts</a>
+            </div>
+        </div>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 
