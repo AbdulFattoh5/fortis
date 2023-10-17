@@ -1,27 +1,3 @@
-// banner image change
-let currentImg = 0
-const images = ['./img/banner-bg.jpg', './img/banner-bg2.jpg', './img/banner-bg3.jpg'];
-
-function changeImg() {
-    document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
-    currentImg = (currentImg + 1) % images.length;
-}
-
-function changeImag() {
-    currentImg = (currentImg - 1 + images.length) % images.length;
-    document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
-}
-
-setInterval(changeImg, 5000);
-
-changeImg();
-
-const bannerLeft = document.querySelector('#bannerBtn-l'),
-    bannerRight = document.querySelector('#bannerBtn-r');
-
-bannerLeft.addEventListener('click', changeImag);
-bannerRight.addEventListener('click', changeImg);
-
 // burger menu
 const burger = document.querySelector('#burger'),
     header = document.querySelector('.nav'),
@@ -106,6 +82,16 @@ const langArr = {
         error2:'Please try to send one more time or you can send your message from',
         error3:'or',
         errorBtn: 'Close',
+        abouth1:'About Us.',
+        abouth2:'Our Journey.',
+        abouth3:'Our Mission.',
+        abouth4:'Why Choose Us.',
+        abouth5:'Get in Touch.',
+        aboutp1:'Welcome to HEATERPOL, your trusted partner in creating a world of possibilities. With a foundation built on integrity and innovation, we have established ourselves as a reliable and dynamic force in various industries. Our commitment to excellence drives us to deliver top-quality products and services that cater to your diverse needs.',
+        aboutp2:'Since our inception, HEATERPOL has embarked on a journey of growth and exploration. Starting with a vision to provide comprehensive solutions, we have evolved into a multifaceted company, offering a wide range of goods and services. Our relentless pursuit of knowledge and adaptability has enabled us to stay ahead of the curve and bring you cutting-edge solutions.',
+        aboutp3:'At HEATERPOL, our mission is to be a driving force for your success. We strive to create a harmonious environment where innovation flourishes, and possibilities become reality. Through our dedicated team and expertise, we aim to provide top-quality products, impeccable service, and strategic guidance that empower you to achieve your goals.',
+        aboutp4:'Diverse Expertise: Our team comprises experts across various domains, ensuring comprehensive solutions for your every requirement. Quality Assurance: We uphold the highest standards of quality in every product and service we offer, fostering trust and reliability. Customer-Centric Approach: Your satisfaction is ou lng-r priority. We listen, understand, and tailor our offerings to match your unique needs. Global Reach: With a strong presence in international markets, we facilitate seamless import, export, and distribution of goods.',
+        aboutp5:'Join hands with HEATERPOL and experience a journey of innovation, growth, and success. Contact us today to explore how we can partner to achieve greatness together.',
     },
 
     tu: {
@@ -177,6 +163,16 @@ const langArr = {
         error2:'Lütfen bir kez daha göndermeyi deneyin veya mesajınızı gönderebilirsiniz:',
         error3:'veya',
         errorBtn: 'Kapatmak',
+        abouth1:'Hakkımızda.',
+        abouth2:'Yolumuz.',
+        abouth3:'Misyonumuz.',
+        abouth4:'Bizi Tercih Etmeniz İçin Nedenler.',
+        abouth5:'İletişime geçin.',
+        aboutp1:'HEATERPOL\'a hoş geldiniz, sizi bir dünya dolusu fırsat yaratma yolculuğunda güvenilir bir ortak olarak karşılıyoruz. İlkeli ve yenilikçilik temelinde kurulan yapımızla, çeşitli sektörlerde güvenilir ve dinamik bir güç haline geldik. Mükemmelliğe olan taahhüdümüz, sizin çeşitli ihtiyaçlarınıza uygun üst düzey ürünler ve hizmetler sunmamıza yol açar.',
+        aboutp2:'Kuruluşumuzdan bu yana, HEATERPOL büyüme ve keşif dolu bir yolculuğa çıktı. Kapsamlı çözümler sunma vizyonuyla başladık ve geniş bir mal ve hizmet yelpazesi sunan çok yönlü bir şirkete dönüştük. Bilgiye olan sürekli arayışımız ve adaptasyon yeteneğimiz, sizlere öncü çözümler sunmak için zamanın ötesine geçmemize yardımcı oldu.',
+        aboutp3:'HEATERPOL olarak, misyonumuz sizin başarınıza itici güç olmaktır. Yeniliklerin geliştiği ve fırsatların gerçeklik haline geldiği uyumlu bir ortam yaratmaya çalışıyoruz. Özverili ekibimiz ve uzmanlığımız sayesinde, size üst düzey ürünler, kusursuz hizmet ve hedeflerinize ulaşmanızı sağlayacak stratejik rehberlik sunmayı amaçlıyoruz.',
+        aboutp4:'Çeşitli Uzmanlık Alanları: Ekibimiz, farklı alanlarda uzmanlardan oluşur, böylece her türlü ihtiyacınıza kapsamlı çözümler sunarız. Kalite Güvencesi: Sunulan her ürün ve hizmette en yüksek kalite standartlarını koruyarak, güven ve güvenilirlik oluşturuyoruz. Müşteri Odaklı Yaklaşım: Memnuniyetiniz önceliğimizdir. Dinler, anlarız ve benzersiz ihtiyaçlarınıza uygun çözümler sunarız. Küresel Erişim: Uluslararası pazardaki güçlü varlığımız ile malzemelerin sorunsuzca ithalat, ihracat ve dağıtımını sağlıyoruz.',
+        aboutp5:'Birlikte HEATERPOL\'a katılın ve yenilik, büyüme ve başarının bir yolculuğunu deneyimleyin. Bugün bize ulaşarak, birlikte büyüklüğü elde etmek için nasıl ortaklık kurabileceğimizi keşfedin.',
     },
 };
 
@@ -204,61 +200,6 @@ function setLang(lang) {
 }
 let lang = window.hasOwnProperty('localStorage') || 'en';
 setLang(lang);
-
-// counter animation
-const counters = document.querySelectorAll('.counter');
-const counterM = document.querySelector('.counterM');
-
-const options = {
-    threshold: 0.5,
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            if (counter.classList.contains('counterM')) {
-                updateCounterM();
-            } else {
-                updateCounter(counter);
-            }
-            observer.unobserve(counter);
-        }
-    });
-}, options);
-
-counters.forEach(counter => {
-    observer.observe(counter);
-});
-
-const updateCounter = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const speed = 200;
-    const increment = target / speed;
-
-    if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(() => updateCounter(counter), 50);
-    } else {
-        counter.innerText = target;
-    }
-};
-
-const targetM = parseInt(counterM.getAttribute('data-target'));
-const duration = 5000;
-const step = Math.floor(targetM / (duration / 100));
-let current = 0;
-
-const updateCounterM = () => {
-    current += step;
-    if (current >= targetM) {
-        counterM.textContent = targetM;
-    } else {
-        counterM.textContent = current;
-        requestAnimationFrame(updateCounterM);
-    }
-};
 
 // form
 const backCall = document.querySelector('.backCall'),

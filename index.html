@@ -15,6 +15,11 @@
     <script>
         emailjs.init("lBPf34_JzoTn4NQVQ");
     </script>
+    <style>
+        body{
+            background: #191b31;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,7 +68,6 @@
         </div>
     </div>
     <header class="main" id="banner">
-        <div class="main-bg"></div>
         <div class="header">
             <div class="container">
                 <div class="header__wrap">
@@ -92,10 +96,10 @@
             <div class="container">
                 <ul class="nav__menu">
                     <li>
-                        <a href="" class="nav__link lng-link1">Home</a>
+                        <a href="./index.html" class="nav__link lng-link1">Home</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link lng-link2">About company</a>
+                        <a href="./pages/about.html" class="nav__link lng-link2">About company</a>
                     </li>
                     <li>
                         <a href="" class="nav__link lng-link3">We offer</a>
@@ -255,7 +259,7 @@
                 <p class="about__p lng-aboutP">HEATERPOL is your reliable partner across diverse sectors. We offer
                     services in real estate, industrial equipment, furniture, automotive, and petroleum products. Our
                     goal is to create a comfortable and successful space for you.</p>
-                <a href="" class="about__link lng-aboutLink">Read more</a>
+                <a href="./pages/about.html" class="about__link lng-aboutLink">Read more</a>
                 <div class="about__blocks">
                     <div class="about__block-item">
                         <div class="about__block-item-img">
@@ -415,6 +419,86 @@
         </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script>
+        // banner image change
+        let currentImg = 0
+        const images = ['./img/banner-bg.jpg', './img/banner-bg2.jpg', './img/banner-bg3.jpg'];
+
+        function changeImg() {
+            document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
+            currentImg = (currentImg + 1) % images.length;
+        }
+
+        function changeImag() {
+            currentImg = (currentImg - 1 + images.length) % images.length;
+            document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
+        }
+
+        setInterval(changeImg, 5000);
+
+        changeImg();
+
+        const bannerLeft = document.querySelector('#bannerBtn-l'),
+            bannerRight = document.querySelector('#bannerBtn-r');
+
+        bannerLeft.addEventListener('click', changeImag);
+        bannerRight.addEventListener('click', changeImg);
+
+        // counter animation
+        const counters = document.querySelectorAll('.counter');
+        const counterM = document.querySelector('.counterM');
+
+        const options = {
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    if (counter.classList.contains('counterM')) {
+                        updateCounterM();
+                    } else {
+                        updateCounter(counter);
+                    }
+                    observer.unobserve(counter);
+                }
+            });
+        }, options);
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        const updateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const speed = 200;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => updateCounter(counter), 50);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        const targetM = parseInt(counterM.getAttribute('data-target'));
+        const duration = 5000;
+        const step = Math.floor(targetM / (duration / 100));
+        let current = 0;
+
+        const updateCounterM = () => {
+            current += step;
+            if (current >= targetM) {
+                counterM.textContent = targetM;
+            } else {
+                counterM.textContent = current;
+                requestAnimationFrame(updateCounterM);
+            }
+        };
+    </script>
 </body>
 
 </html>
