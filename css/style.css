@@ -13,6 +13,25 @@ body {
     font-family: 'PR', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.services,
+.about,
+.offer,
+.work,
+#form,
+.footer,
+.aboutus,
+.contact,
+.offer__main,
+.feedback {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1430px;
     height: 100%;
@@ -1347,27 +1366,27 @@ body {
     display: block;
 }
 
-.contact__block{
+.contact__block {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 30px;
 }
 
-.contact__block-p{
+.contact__block-p {
     color: #323232;
     font-size: 18px;
     font-family: "PR", sans-serif;
 }
 
-.contact__h{
+.contact__h {
     color: #323232;
     font-size: 18px;
     font-family: "PB", sans-serif;
     margin-bottom: 10px;
 }
 
-.contact__p{
+.contact__p {
     color: #323232;
     font-size: 18px;
     font-family: "PR", sans-serif;

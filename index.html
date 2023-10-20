@@ -10,10 +10,16 @@
     <link rel="shortcut icon" href="./img/favicon.png" />
     <!-- icons -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./js/wow.min.js"></script>
     <!-- emailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // email
         emailjs.init("lBPf34_JzoTn4NQVQ");
+        // animation
+        new WOW().init();
     </script>
     <style>
         body {
@@ -68,7 +74,7 @@
         </div>
     </div>
     <header class="main" id="banner">
-        <div class="header">
+        <div class="header animate__animated animate__fadeInDown">
             <div class="container">
                 <div class="header__wrap">
                     <a href="./index.html" class="header__logo">
@@ -155,7 +161,7 @@
                         <p class="achivments__p lng-achivmentsH3">Completed projects</p>
                     </div>
                 </div>
-                <div class="achivments__form">
+                <div class="achivments__form animate__animated animate__fadeInUp wow">
                     <div class="achivments__form-bg"></div>
                     <h1 class="achivments__form-h lng-formH">APPLICATION ON-LINE</h1>
                     <p class="achivments__form-p lng-formP">Leave a request and our specialists will contact you as soon
@@ -175,69 +181,69 @@
     </section>
     <section class="services">
         <div class="container">
-            <h1 class="title lng-title1">Our services:</h1>
-            <div class="subtitle">
+            <h1 class="title lng-title1 animate__animated animate__fadeInLeft wow">Our services:</h1>
+            <div class="subtitle animate__animated animate__fadeInLeft wow">
                 <div class="subtitle__line"></div>
                 <p class="subtitle__p lng-subtitle1">WE ARE OFFERING TO YOU</p>
             </div>
             <div class="services__wrap">
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/real-estate.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service1">Property market</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/equipment.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service2">Equipment for industrial use</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/furniture.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service3">Furnishings and decorative supplies</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/transport.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service4">Transport</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/oil-products.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service5">Petroleum derivatives</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/drinks.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service6">Edibles and beverages</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/beauty.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service7">Beauty products</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/cloth.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service8">Clothes</p>
                         <a href="#form" class="services__item-btn lng-serviceBtn">More details</a>
                     </div>
                 </div>
-                <div class="services__item">
+                <div class="services__item animate__animated animate__fadeIn wow">
                     <img src="./img/healthcare.png" alt="" class="services__item-img">
                     <div class="services__item-desc">
                         <p class="services__item-p lng-service9">Healthcare equipment</p>
@@ -249,8 +255,8 @@
     </section>
     <section class="about">
         <div class="about__wrap container">
-            <img src="./img/about.jpg" alt="" class="about__img">
-            <div class="about__desc">
+            <img src="./img/about.jpg" alt="" class="about__img animate__animated animate__fadeInLeft wow">
+            <div class="about__desc animate__animated animate__fadeInRight wow">
                 <h1 class="title lng-aboutTitle">About us</h1>
                 <div class="subtitle">
                     <div class="subtitle__line"></div>
@@ -291,19 +297,19 @@
     </section>
     <section class="offer">
         <div class="container">
-            <h1 class="title lng-offer">WE OFFER</h1>
+            <h1 class="title lng-offer animate__animated animate__fadeInLeft wow">WE OFFER</h1>
             <div class="services__wrap">
-                <div class="offer__item">
+                <div class="offer__item animate__animated animate__fadeInRight wow">
                     <img src="./img/electrical-engineering.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service10">Electrical and electronic engineering</h2>
                     <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
                 </div>
-                <div class="offer__item">
+                <div class="offer__item animate__animated animate__fadeInRight wow">
                     <img src="./img/souvenir.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service11">Travel and souvenir items</h2>
                     <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
                 </div>
-                <div class="offer__item">
+                <div class="offer__item animate__animated animate__fadeInRight wow">
                     <img src="./img/solar-panel.png" alt="" class="offer__img">
                     <h2 class="offer__h lng-service12">Solar Panels</h2>
                     <a href="#form" class="offer__btn lng-serviceBtn">More details</a>
@@ -315,31 +321,31 @@
         <div class="work__bg"></div>
         <div class="container">
             <div class="work__wrap">
-                <h1 class="title work__title lng-workH">HOW WE ARE WORKING</h1>
-                <div class="subtitle work__subtitle">
+                <h1 class="title work__title lng-workH animate__animated animate__fadeInLeft wow">HOW WE ARE WORKING</h1>
+                <div class="subtitle work__subtitle animate__animated animate__fadeInLeft wow">
                     <div class="subtitle__line"></div>
                     <p class="subtitle__p lng-workSubH">ONLY 4 STEPS FOR SUCCESSFUL COOPERATION</p>
                 </div>
                 <div class="work__blocks">
-                    <div class="work__blocks-item">
+                    <div class="work__blocks-item animate__animated animate__fadeInUp wow">
                         <div class="work__blocks-item-img">
                             <img src="./img/work1.png" alt="">
                         </div>
                         <h3 class="work__blocks-item-h lng-work1">YOU LEAVE A REQUEST ON THE SITE</h3>
                     </div>
-                    <div class="work__blocks-item">
+                    <div class="work__blocks-item animate__animated animate__fadeInUp wow">
                         <div class="work__blocks-item-img">
                             <img src="./img/work2.png" alt="">
                         </div>
                         <h3 class="work__blocks-item-h lng-work2">WE MAKE CALCULATIONS</h3>
                     </div>
-                    <div class="work__blocks-item">
+                    <div class="work__blocks-item animate__animated animate__fadeInUp wow">
                         <div class="work__blocks-item-img">
                             <img src="./img/work3.png" alt="">
                         </div>
                         <h3 class="work__blocks-item-h lng-work3">WE DO THE WORK</h3>
                     </div>
-                    <div class="work__blocks-item">
+                    <div class="work__blocks-item animate__animated animate__fadeInUp wow">
                         <div class="work__blocks-item-img">
                             <img src="./img/work4.png" alt="">
                         </div>
@@ -347,21 +353,21 @@
                     </div>
                 </div>
                 <div class="work__order">
-                    <a href="#form" class="work__order-btn lng-workBtn">order a consultation</a>
-                    <p class="work__order-p lng-workP">WRITE TO US AND OUR SPECIALISTS WILL CONTACT YOU SOON</p>
+                    <a href="#form" class="work__order-btn lng-workBtn animate__animated animate__fadeInLeft wow">order a consultation</a>
+                    <p class="work__order-p lng-workP animate__animated animate__fadeInRight wow">WRITE TO US AND OUR SPECIALISTS WILL CONTACT YOU SOON</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="form" id="form">
         <div class="container">
-            <h1 class="title lng-contactTitle">Contact</h1>
-            <div class="subtitle">
+            <h1 class="title lng-contactTitle animate__animated animate__fadeInLeft wow">Contact</h1>
+            <div class="subtitle animate__animated animate__fadeInLeft wow">
                 <div class="subtitle__line"></div>
                 <p class="subtitle__p lng-contactSubTitle">Contact us</p>
             </div>
             <div class="form__wrap">
-                <form method="post" class="form__form">
+                <form method="post" class="form__form animate__animated animate__fadeInLeft wow">
                     <div class="form__bg"></div>
                     <div class="form__form-wrap">
                         <h1 class="form__form-h lng-contactH">APPLICATION ON-LINE</h1>
@@ -374,7 +380,7 @@
                         <button class="form__form-btn lng-contactBtn" id="submitF" type="submit">SEND</button>
                     </div>
                 </form>
-                <div class="form__emails">
+                <div class="form__emails animate__animated animate__fadeInRight wow">
                     <a href="mailto: heaterpoldist@gmail.com" class="form__emails-item">heaterpoldist@gmail.com <img
                             src="./img/work1.png" alt=""></a>
                     <a href="mailto: heaterpolco@gmail.com" class="form__emails-item">heaterpolco@gmail.com <img
@@ -384,11 +390,13 @@
         </div>
     </section>
     <section class="map">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A79c81cbe24953f88e11c34bbf12601607bc6c1394a45a8542fe03afbb0057ce0&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A79c81cbe24953f88e11c34bbf12601607bc6c1394a45a8542fe03afbb0057ce0&amp;source=constructor"
+            width="100%" height="450" frameborder="0"></iframe>
     </section>
     <footer class="footer">
         <div class="footer__wrap container">
-            <div class="footer__details">
+            <div class="footer__details animate__animated animate__fadeInLeft wow">
                 <div class="footer__details-item">
                     <img src="./img/phone.svg" alt="" class="footer__details-item-img">
                     <div class="footer__details-item-main">
@@ -407,7 +415,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__nav">
+            <div class="footer__nav animate__animated animate__fadeInRight wow">
                 <a href="./index.html" class="footer__nav-link lng-footerLink1">Home</a>
                 <a href="./pages/about.html" class="footer__nav-link lng-footerLink2">About company</a>
                 <a href="./pages/offer.html" class="footer__nav-link lng-footerLink3">We offer</a>

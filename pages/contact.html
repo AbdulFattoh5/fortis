@@ -10,10 +10,16 @@
     <link rel="shortcut icon" href="../img/favicon.png" />
     <!-- icons -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="../js/wow.min.js"></script>
     <!-- emailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // email
         emailjs.init("lBPf34_JzoTn4NQVQ");
+        // animation
+        new WOW().init();
     </script>
 </head>
 
@@ -63,7 +69,7 @@
         </div>
     </div>
     <header class="main__header">
-        <div class="header">
+        <div class="header animate__animated animate__fadeInDown">
             <div class="container">
                 <div class="header__wrap">
                     <a href="../index.html" class="header__logo main__header-logo-img">
@@ -117,19 +123,20 @@
     </header>
     <section class="contact">
         <div class="container">
-            <h1 class="title title__bl lng-contactH">Contacts</h1>
-            <a href="tel:+998999876543" class="contact__link">+998 99 987 65 43</a>
-            <div class="contact__block">
+            <h1 class="title title__bl lng-contactH animate__animated animate__fadeInLeft wow">Contacts</h1>
+            <a href="tel:+998999876543" class="contact__link animate__animated animate__fadeInLeft wow">+998 99 987 65 43</a>
+            <div class="contact__block animate__animated animate__fadeInLeft wow">
                 <img src="../img/contact.png" alt="" class="contact__blog-img">
                 <p class="contact__block-p lng-contactBlockP">Reception of calls: from 9:00 to 18:00 (Mon-Fri)</p>
             </div>
-            <h3 class="contact__h lng-contactTitle">Address</h3>
-            <p class="contact__p lng-contactP">Uzbekistan, Tashkent, Chilanzar district, street AFROSIAB, street BESH-YOGOCH</p>
+            <h3 class="contact__h lng-contactTitle animate__animated animate__fadeInLeft wow">Address</h3>
+            <p class="contact__p lng-contactP animate__animated animate__fadeInLeft wow">Uzbekistan, Tashkent, Chilanzar district, street AFROSIAB, street
+                BESH-YOGOCH</p>
         </div>
     </section>
     <footer class="footer footer__about">
         <div class="footer__wrap container">
-            <div class="footer__details">
+            <div class="footer__details animate__animated animate__fadeInLeft wow">
                 <div class="footer__details-item">
                     <img src="../img/phone.svg" alt="" class="footer__details-item-img">
                     <div class="footer__details-item-main">
@@ -148,7 +155,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__nav">
+            <div class="footer__nav animate__animated animate__fadeInRight wow">
                 <a href="../index.html" class="footer__nav-link lng-footerLink1">Home</a>
                 <a href="./about.html" class="footer__nav-link lng-footerLink2">About company</a>
                 <a href="./offer.html" class="footer__nav-link lng-footerLink3">We offer</a>
