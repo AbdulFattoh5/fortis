@@ -117,6 +117,10 @@ const langArr = {
         swiperp11: 'We manufacture, purchase, and trade various types of tourist and souvenir products.',
         swiperp12:'We engage in the trading of solar panels.',
         feedbackH:'Reviews about us',
+        contactH:'Contacts',
+        contactBlockP:'Reception of calls: from 9:00 to 18:00 (Mon-Fri)',
+        contactTitle:'Address',
+        contactP:'Uzbekistan, Tashkent, Chilanzar district, street AFROSIAB, street BESH-YOGOCH',
     },
 
     tu: {
@@ -223,6 +227,10 @@ const langArr = {
         swiperp11: 'Çeşitli türde turistik ve hediyelik ürünler üretiyor, satın alıyor ve ticaretini yapıyoruz.',
         swiperp12:'Güneş panellerinin ticareti ile ilgileniyoruz.',
         feedbackH:'Hakkımızda yapılan yorumlar',
+        contactH:'Kişiler',
+        contactBlockP:'Çağrıların alınması: 9:00 - 18:00 (Pazartesi-Cuma)',
+        contactTitle:'Adres',
+        contactP:'Özbekistan, Taşkent, Chilanzar bölgesi, AFROSIAB caddesi, BESH-YOGOCH caddesi',
     },
 };
 

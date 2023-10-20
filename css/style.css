@@ -1323,16 +1323,54 @@ body {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    height: 20px  !important;
-    width: 20px  !important;
+    height: 20px !important;
+    width: 20px !important;
 }
 
-.swiper{
+.swiper {
     margin-top: 50px;
 }
 
-.lng-feedbackH{
+.lng-feedbackH {
     font-size: 50px;
+}
+
+.contact {
+    margin-top: 80px;
+}
+
+.contact__link {
+    color: #323232;
+    font-size: 18px;
+    font-family: "PR", sans-serif;
+    margin: 30px 0;
+    display: block;
+}
+
+.contact__block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.contact__block-p{
+    color: #323232;
+    font-size: 18px;
+    font-family: "PR", sans-serif;
+}
+
+.contact__h{
+    color: #323232;
+    font-size: 18px;
+    font-family: "PB", sans-serif;
+    margin-bottom: 10px;
+}
+
+.contact__p{
+    color: #323232;
+    font-size: 18px;
+    font-family: "PR", sans-serif;
 }
 
 @media screen and (max-width:1100px) {
