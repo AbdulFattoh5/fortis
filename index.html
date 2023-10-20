@@ -16,7 +16,7 @@
         emailjs.init("lBPf34_JzoTn4NQVQ");
     </script>
     <style>
-        body{
+        body {
             background: #191b31;
         }
     </style>
@@ -105,7 +105,7 @@
                         <a href="./pages/offer.html" class="nav__link lng-link3">We offer</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link lng-link4">Reviews about us</a>
+                        <a href="./pages/reviews.html" class="nav__link lng-link4">Reviews about us</a>
                     </li>
                     <li>
                         <a href="" class="nav__link lng-link5">Contacts</a>
@@ -384,9 +384,7 @@
         </div>
     </section>
     <section class="map">
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3ebd0d8ee447f12d65d6b79b90f68a808ce195e546ba9bee6247cffe4742d536&amp;source=constructor"
-            width="100%" height="450" frameborder="0"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A79c81cbe24953f88e11c34bbf12601607bc6c1394a45a8542fe03afbb0057ce0&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
     </section>
     <footer class="footer">
         <div class="footer__wrap container">
@@ -413,92 +411,13 @@
                 <a href="./index.html" class="footer__nav-link lng-footerLink1">Home</a>
                 <a href="./pages/about.html" class="footer__nav-link lng-footerLink2">About company</a>
                 <a href="./pages/offer.html" class="footer__nav-link lng-footerLink3">We offer</a>
-                <a href="" class="footer__nav-link lng-footerLink4">Reviews about us</a>
+                <a href="./pages/reviews.html" class="footer__nav-link lng-footerLink4">Reviews about us</a>
                 <a href="" class="footer__nav-link lng-footerLink5">Contacts</a>
             </div>
         </div>
     </footer>
     <script src="./js/script.js"></script>
-    <script>
-        // banner image change
-        let currentImg = 0
-        const images = ['./img/banner-bg.jpg', './img/banner-bg2.jpg', './img/banner-bg3.jpg'];
-
-        function changeImg() {
-            document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
-            currentImg = (currentImg + 1) % images.length;
-        }
-
-        function changeImag() {
-            currentImg = (currentImg - 1 + images.length) % images.length;
-            document.getElementById('banner').style.backgroundImage = `url(${images[currentImg]})`;
-        }
-
-        setInterval(changeImg, 5000);
-
-        changeImg();
-
-        const bannerLeft = document.querySelector('#bannerBtn-l'),
-            bannerRight = document.querySelector('#bannerBtn-r');
-
-        bannerLeft.addEventListener('click', changeImag);
-        bannerRight.addEventListener('click', changeImg);
-
-        // counter animation
-        const counters = document.querySelectorAll('.counter');
-        const counterM = document.querySelector('.counterM');
-
-        const options = {
-            threshold: 0.5,
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    if (counter.classList.contains('counterM')) {
-                        updateCounterM();
-                    } else {
-                        updateCounter(counter);
-                    }
-                    observer.unobserve(counter);
-                }
-            });
-        }, options);
-
-        counters.forEach(counter => {
-            observer.observe(counter);
-        });
-
-        const updateCounter = (counter) => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const speed = 200;
-            const increment = target / speed;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(() => updateCounter(counter), 50);
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        const targetM = parseInt(counterM.getAttribute('data-target'));
-        const duration = 5000;
-        const step = Math.floor(targetM / (duration / 100));
-        let current = 0;
-
-        const updateCounterM = () => {
-            current += step;
-            if (current >= targetM) {
-                counterM.textContent = targetM;
-            } else {
-                counterM.textContent = current;
-                requestAnimationFrame(updateCounterM);
-            }
-        };
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

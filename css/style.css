@@ -1244,18 +1244,18 @@ body {
     margin-bottom: 20px;
 }
 
-.offer__wrap{
+.offer__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
 }
 
-.offer__main{
+.offer__main {
     margin-top: 80px;
 }
 
-.offer__block{
+.offer__block {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1263,7 +1263,7 @@ body {
     width: 100%;
 }
 
-.offer__block-img{
+.offer__block-img {
     max-width: 560px;
     width: 100%;
     height: 350px;
@@ -1271,19 +1271,60 @@ body {
     border-radius: 10px;
 }
 
-.offer__block-h{
+.offer__block-h {
     color: #191b31;
     font-size: 30px;
     margin-bottom: 10px;
 }
 
-.offer__block-p{
+.offer__block-p {
     font-size: 18px;
 }
 
 .title__bl,
-.subtitle__bl{
+.subtitle__bl {
     color: black;
+}
+
+.feedback {
+    margin-top: 80px;
+}
+
+.feedback__item {
+    background: #191b31;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.feedback__item-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.feedback__item-main-img {
+    height: 70px;
+    width: 70px;
+}
+
+.feedback__item-main-name {
+    font-family: 'PB', sans-serif;
+    font-size: 22px;
+}
+
+.feedback__item-p {
+    font-family: 'PR', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    height: 20px  !important;
+    width: 20px  !important;
 }
 
 @media screen and (max-width:1100px) {
@@ -1292,7 +1333,7 @@ body {
         padding: 10px;
     }
 
-    .offer__block-img{
+    .offer__block-img {
         max-width: 480px;
         height: 320px;
     }
@@ -1536,20 +1577,20 @@ body {
         height: 350px;
     }
 
-    .offer__wrap{
+    .offer__wrap {
         gap: 20px;
     }
 
-    .offer__block{
+    .offer__block {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .offer__block:nth-child(even){
+    .offer__block:nth-child(even) {
         flex-direction: column-reverse;
     }
 
-    .offer__block-img{
+    .offer__block-img {
         max-width: 100%;
         height: 400px;
     }
@@ -1568,7 +1609,7 @@ body {
         font-size: 15px;
     }
 
-    .offer__block-img{
+    .offer__block-img {
         height: 300px;
     }
 }
@@ -1630,11 +1671,11 @@ body {
         font-size: 25px;
     }
 
-    .footer__details-item-link{
+    .footer__details-item-link {
         font-size: 18px;
     }
 
-    .offer__block-img{
+    .offer__block-img {
         height: 260px;
     }
 }
