@@ -116,6 +116,7 @@ const langArr = {
         swiperp10: 'We are involved in the trading, import, export, repair, and maintenance of diverse electrical and electronic devices.',
         swiperp11: 'We manufacture, purchase, and trade various types of tourist and souvenir products.',
         swiperp12:'We engage in the trading of solar panels.',
+        feedbackH:'Reviews about us',
     },
 
     tu: {
@@ -221,6 +222,7 @@ const langArr = {
         swiperp10: 'Farklı elektrik ve elektronik cihazların ticareti, ithalatı, ihracatı, tamiri ve bakımı konusunda faaliyet gösteriyoruz.',
         swiperp11: 'Çeşitli türde turistik ve hediyelik ürünler üretiyor, satın alıyor ve ticaretini yapıyoruz.',
         swiperp12:'Güneş panellerinin ticareti ile ilgileniyoruz.',
+        feedbackH:'Hakkımızda yapılan yorumlar',
     },
 };
 
