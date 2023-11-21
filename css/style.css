@@ -1316,6 +1316,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
+    height: auto !important;
 }
 
 .feedback__item-main {
